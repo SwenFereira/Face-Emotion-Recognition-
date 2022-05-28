@@ -1,5 +1,5 @@
 from keras.models import load_model
-from keras.preprocessing.image import img_to_array
+from tensorflow.keras.utils import img_to_array
 import numpy as np
 import cv2
 from streamlit_webrtc import VideoTransformerBase
