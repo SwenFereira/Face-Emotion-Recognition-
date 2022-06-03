@@ -11,7 +11,7 @@ import streamlit as st
 from tensorflow import keras
 from keras.models import model_from_json
 from tensorflow.keras.utils import img_to_array
-from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
+from streamlit_webrtc import webrtc_streamer, VideoTransformerBase,VideoProcessorBase
 
 # load model
 emotion_dict = {0:'angry', 1 :'happy', 2: 'neutral', 3:'sad', 4: 'surprise'}
