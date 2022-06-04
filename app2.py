@@ -75,9 +75,17 @@ def main():
                                             </br>"""
         st.markdown(html_temp_home1, unsafe_allow_html=True)
         st.write("""
-                 The application has two functionalities.
-                 1. Real time face detection using web cam feed.
-                 2. Real time face emotion recognization.
+                 Instruction while using this APP.
+		 
+    1. Click on the home button and select Webcam Emotion Detection.
+    
+    2. Click on the Start button to start.
+		 
+    3. Allow the webcam access and WebCam window will open afterwardsn.
+    
+    4. It will load the realtime face emotion detection block with the prediction.
+    
+    5. Click on  Stop  to end.
                  """)
     elif choice == "Webcam Face Detection":
         st.header("Webcam Live Feed")
