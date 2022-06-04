@@ -11,7 +11,7 @@ import streamlit as st
 from tensorflow import keras
 from keras.models import model_from_json
 from tensorflow.keras.utils import img_to_array
-from streamlit_webrtc import webrtc_streamer, VideoTransformerBase,VideoProcessorBase
+from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 
 # load model
 emotion_dict = {0:'angry', 1 :'happy', 2: 'neutral', 3:'sad', 4: 'surprise'}
@@ -29,6 +29,8 @@ try:
     face_cascade = cv2.CascadeClassifier(r'haarcascade_frontalface_default.xml')
 except Exception:
     st.write("Error loading cascade classifiers")
+    
+RTC_CONFIGURATION = RTCConfiguration({"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]})
 
 class VideoTransformer(VideoTransformerBase):
     def transform(self, frame):
@@ -80,7 +82,8 @@ def main():
     elif choice == "Webcam Face Detection":
         st.header("Webcam Live Feed")
         st.write("Click on start to use webcam and detect your face emotion")
-        webrtc_streamer(key="example", video_processor_factory=VideoTransformer)
+        webrtc_streamer(key="example", mode=WebRtcMode.SENDRECV, rtc_configuration=RTC_CONFIGURATION,
+                        video_processor_factory=VideoTransformer)
 
     elif choice == "About":
         st.subheader("About this app")
