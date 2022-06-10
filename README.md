@@ -6,7 +6,7 @@
 •	The aim of the project is to create a Facial Emotion Recognition System (FERS) that can detect students' emotional states in e-learning systems that use video conferencing.  This technology instantly conveys the emotional states of the students to the educator in order to create a more engaged educational environment. Our results supported those of other studies that have shown that in e- learning systems, it is possible to observe the motivation level of both the individual and the virtual classroom.
 
 
-##Our dataset have 7 types of emotion ranging form 0-6:
+## Our dataset have 7 types of emotion ranging form 0-6:
 
 •	Anger
 
@@ -24,9 +24,9 @@
 
 After looking bar plot we can observe that majority of the classes belongs to Happy,Sad and Neutral on the otherside anger, Fear and surprise are average and disgust is very low in number.
 
-•	##Project Approch:-
+## Project Approch:-
 
-###Step 1. Build Model
+### Step 1. Build Model
 
 We have used Five different models as follows:
 
@@ -41,7 +41,7 @@ Model 4- Densenet Model
 Model 5- Resnet Mode 
 
 
-###Step 2. Real Time Prediction
+### Step 2. Real Time Prediction
 
 And then we perform Real Time Prediction on our best model using webcam on Google colab itself.
 
@@ -51,16 +51,16 @@ And then we perform Real Time Prediction on our best model using webcam on Googl
   
   - Real Time prediction
  
-###Step 3. Deployment
+### Step 3. Deployment
 
 And lastly we have deployed it on Streamlit Docs .
 
-###● Deployed App Link : 
+### ● Deployed App Link : 
 
  https://share.streamlit.io/swenfereira/face-emotion-recognition-/main/app2.py
  
  
-###Conclusion:-
+### Conclusion:-
 
 ● All the models such as Mobilenet, Dexpression, CNN, Densenet, and ResNet were evaluated.The ResNet model was chosen because it had the highest training accuracy of all the models, and its validation accuracy was nearly 72 percent, which is comparable to CNN models.
 
